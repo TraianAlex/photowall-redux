@@ -4,25 +4,28 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 class Photo extends Component {
+  constructor(props){
+    super(props);
+}
+
   render() {
+    console.log(this.props.hello)
     const { post, i, comments } = this.props;    
     return (
         <figure className="grid-figure">
         <div className="grid-photo-wrap">
-          <Link to={`/single/${post.code}`}>
+          <Link to={`/single/${post.id}`}>
             <img src={post.display_src} alt={post.caption} className="grid-photo" />
           </Link>
-
         </div>
-
         <figcaption>
           <p>{post.caption}</p>
           <div className="control-buttons">
-            <button className="likes">&hearts; {post.likes}</button>
-            <Link className="button" to={`/single/${post.code}`}>
+            <button onClick={() => this.props.increment(i)} className="likes">&hearts; {post.likes}</button>
+            <Link className="button" to={`/single/${post.id}`}>
               <span className="comment-count">
                 <span className="speech-bubble"></span>
-             {this.props.someProp.comments[post.code] ? this.props.someProp.comments[post.code].length : 0 }
+             {this.props.comments[post.id] ? this.props.comments[post.id].length : 0 }
               </span>
             </Link>
           </div>

@@ -5,10 +5,10 @@ import Photo from './photo'
 
 class PhotoWall extends Component {
   render() {
+    console.log(this.props)
     return (
       <div className="photo-grid">
-      {console.log(this.props)}
-        {this.props.someProp.posts.map((post, i) => {
+        {this.props.posts.map((post, i) => {
           return <Photo key={i} post={post} i={i} {...this.props}/>
         })}
       </div>

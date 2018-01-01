@@ -45,13 +45,13 @@ body {
 .photo-grid {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 1200px;
+	max-width: 900px;
 	margin: 0 auto;
 }
 
 .grid-figure,
 .single-photo {
-	flex-basis: calc(33.333% - 4rem);
+	flex-basis: calc(33% - 4rem);
 	flex-grow: 1;
 	flex-shrink: 0;
 	margin: 0 2rem 2rem 2rem;

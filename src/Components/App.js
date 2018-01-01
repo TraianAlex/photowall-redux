@@ -6,11 +6,11 @@ import { Link, withRouter } from 'react-router';
 
 
 
-function mapStateToProps(state) {
+function mapStateToProps(state, ownProps) {
   return {
     posts: state.posts,
     comments: state.comments
-  }
+    }
 }
 
 function mapDispachToProps(dispatch) {

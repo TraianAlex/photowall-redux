@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import React from 'react';
+import Photo from './photo';
+// import Comments from './Comments';
 
-
-class Single extends Component {
+class Single extends React.Component {
   render() {
+    console.log(this.props)
+    
     return (
       <div className="single-photo">
-      I'm the single grid
+      hello world
       </div>
-    );
+    )
   }
-}
+};
 
 export default Single;
