@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../redux/action'
 import Main from './Main'
-import { Link, withRouter } from 'react-router';
+import {withRouter } from 'react-router';
 
 
 

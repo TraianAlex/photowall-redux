@@ -5,12 +5,10 @@ html {
 	font-size: 10px;
 	font-family: sans-serif;
 }
-
 p {
 	font-size: 1.6rem;
 	line-height: 1.5;
 }
-
 h1 {
 	font-family: billabong, 'billabongregular';
 	text-align: center;
@@ -18,11 +16,12 @@ h1 {
 	font-size: 13rem;
 	margin: 2rem 0;
 	letter-spacing: -1px;
-	text-shadow: 0px 4px 0 rgba(18,86,136,0.11);
+	color: black;
+	text-decoration: none;
 }
 
 h1 a {
-	color: #125688;
+	color: black;
 	text-decoration: none;
 }
 
@@ -45,32 +44,30 @@ body {
 .photo-grid {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 900px;
+	max-width: 1000px;
 	margin: 0 auto;
 }
 
 .grid-figure,
 .single-photo {
-	flex-basis: calc(33% - 4rem);
+	flex-basis: calc(33.333% - 4rem);
 	flex-grow: 1;
 	flex-shrink: 0;
 	margin: 0 2rem 2rem 2rem;
 	padding: 2rem;
 	border: 1px solid #d3d3d3;
 	background: #fff;
-	box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
 	position: relative;
 }
 
 .single-photo {
-	max-width: 900px;
+	max-width: 1000px;
 	margin: 0 auto;
 	display: flex;
 	background: #fff;
 }
 
 .single-photo .grid-figure {
-	box-shadow: none;
 	margin: 0 2rem 0 0;
 	border: 0;
 	padding: 0;
@@ -106,25 +103,13 @@ body {
 	color: #f00;
 }
 
-.comment {
+.comment{
+	width: 100%
+}
+.comment p {
 	border-bottom: 1px solid #d3d3d3;
 	padding: 0.5rem 0;
 }
-
-.comment p {
-	font-size: 1.2rem;
-	margin: 0;
-}
-
-.comment strong {
-	color: #00f;
-	margin-right: 5px;
-}
-
-.comment:hover .remove-comment {
-	opacity: 1;
-}
-
 .comment-form input,
 .comment-form textarea {
 	width: 100%;
@@ -140,23 +125,32 @@ body {
 	position: relative;
 }
 
-.likes-heart {
-	background: url("http://f.cl.ly/items/3Y373q2Q3J3Y1j203n0m/Bitmap-3.png") center no-repeat;
+.remove {
 	background-size: contain;
 	font-size: 2rem;
 	padding: 1rem;
 	position: absolute;
-	color: #00f;
+	color:red;
 	left: 50%;
 	top: 50%;
 	pointer-events: none;
+}
+.addpicture {
+	background: url("https://image.flaticon.com/icons/svg/60/60740.svg") center no-repeat;
+	background-size: contain;
+	padding: 40px;
+	display: table;
+	margin: 20px auto;
+	border: none;
 }
 /*  
   Buttons  
 */
 .control-buttons {
+	margin: 0 auto;
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
+	justify-content: center;
 }
 
 button, .button {
@@ -169,9 +163,10 @@ button, .button {
 	padding: 5px;
 	text-align: center;
 	font-size: 15px;
-	color: #00f;
+	color: red;
 	transition: all 0.2s;
 	box-sizing: padding-box;
+	
 }
 
 button:hover,.button:hover, button:focus, .button:focus {
@@ -201,4 +196,40 @@ button:hover,.button:hover, button:focus, .button:focus {
 	border-color: transparent #00f transparent transparent;
 	top: 30%;
 	left: 0;
+}
+
+/*Add Post css*/
+
+.add-post {
+  width: 360px;
+  padding: 0 0 0;
+  margin: auto;
+}
+.form input {
+  font-family: sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background:#065784;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #7B8589;
 }

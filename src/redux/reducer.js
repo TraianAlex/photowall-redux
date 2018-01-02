@@ -1,9 +1,14 @@
-import { createStore, combineReducers,applyMiddleware } from 'redux';
+import {combineReducers } from 'redux';
 import _comments from '../data/comments';
 import _posts from '../data/posts';
 
 function comments(state = _comments, action) {
-    return state;
+  switch(action.type) {
+    case 'ADD_COMMENT' :
+    console.log(...state[action.postId])
+        return {...state, [action.postId] :[...state[action.postId],{text: action.comment}]}
+    default:  return state
+  }
   }
   
   function posts(state = _posts, action) {
@@ -11,7 +16,6 @@ function comments(state = _comments, action) {
       case 'INCREMENT_LIKES' :
         return [...state.slice(0,action.index),{...state[action.index], likes: state[action.index].likes+1},...state.slice(action.index + 1)]
        default:  return state
-      
   }
 }
 
