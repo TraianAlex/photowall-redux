@@ -12,9 +12,9 @@ class Photo extends Component {
   render() {
     return (
         <div className= "comment">
-        {this.props.postComments.map((comment) => {
+        {this.props.postComments.map((comment, i) => {
             return (
-                <p>
+                <p key={i}>
                 {comment.text}
                 </p>
             )

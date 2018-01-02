@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom'
 import PhotoWall from '../Components/PhotoWall'
 import Single from '../Components/Single'
+import AddPost from '../Components/AddPost'
 import { Route,Switch } from 'react-router-dom'
 
 
@@ -15,6 +16,7 @@ class Main extends Component {
         <Switch>
         <Route exact path='/' render={(params) => (<PhotoWall {...this.props}{...params}/>)}/>
         <Route       path='/single/:id' render={(params) => (<Single {...this.props}{...params}/>)}/>
+        <Route       path='/create' render={(params) => (<AddPost {...this.props}{...params}/>)}/>        
         </Switch>
       </div>
     );

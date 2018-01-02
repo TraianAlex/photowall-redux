@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from './photo';
+import Photo from './Photo';
 import Comments from './Comments'
 class Single extends React.Component {
   render() {

@@ -1,22 +1,20 @@
-// increment
-export function increment(index) {
-    return {
-      type: 'INCREMENT_LIKES',
-      index
+
+    export function addPicture(id, imageLink, description) {
+      return {
+        type: 'ADD_PICTURE',
+        id,
+        imageLink,
+        description
+      }
     }
-  }
   
-  // add comment
-  export function addPicture(pictureUrl, title) {
+  export function removePicture(i) {
     return {
-      type: 'ADD_PICTURE',
-      pictureUrl,
-      title
+      type: 'REMOVE_PICTURE',
+      i
     }
   }
 
-
-// add comment
 export function addComment(postId, comment) {
   return {
     type: 'ADD_COMMENT',
