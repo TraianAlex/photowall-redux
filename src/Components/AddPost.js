@@ -6,12 +6,12 @@ class Single extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const values = serializeForm(e.target, { hash: true })	
+    if (values["imageLink"] && values["description"]) {
     values.id = Number(new Date())
-    
     this.props.addPicture(values.id,values.imageLink,values.description)
+    this.props.history.push('/')
     }
-
-
+    }
   render() {
     console.log("hello")    
     return (

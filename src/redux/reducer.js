@@ -28,7 +28,4 @@ function comments(state = _comments, action) {
 
   const rootReducer = combineReducers({posts, comments});
   
-  export default rootReducer;
-  
-  // return [...state.slice(0,action.index),{...state[action.index], likes: state[action.index].likes+1},...state.slice(action.index + 1)]
-  
+  export default rootReducer;  
