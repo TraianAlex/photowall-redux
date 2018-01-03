@@ -17,7 +17,10 @@ class Photo extends Component {
         <figcaption>
           <p>{post.description}</p>
           <div className="control-buttons">
-          <button className="Remove" onClick={() => this.props.removePicture(i)}>Remove</button>
+          <button className="Remove" onClick={() => {
+            this.props.history.push('/')
+            this.props.removePicture(i)
+          }}>Remove</button>
           </div>
         </figcaption>
       </figure>

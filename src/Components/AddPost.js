@@ -13,7 +13,6 @@ class Single extends Component {
     }
     }
   render() {
-    console.log("hello")    
     return (
       <div className="add-post">
 <div className="form" onSubmit={this.handleSubmit}>

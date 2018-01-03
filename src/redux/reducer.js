@@ -20,7 +20,6 @@ function comments(state = _comments, action) {
       case 'REMOVE_PICTURE' :
         return [...state.slice(0,action.i),...state.slice(action.i + 1)]
       case 'ADD_PICTURE' :
-      console.log(action.id, action.imageLink, action.description)
          return [{"id": action.id, "imageLink": action.imageLink, "description": action.description},...state]
        default:  return state
   }
