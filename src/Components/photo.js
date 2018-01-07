@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom'
 class Photo extends Component {
 
   render() {
-    console.log(this.props)
     const { post, i } = this.props; 
     return (
         <figure className="grid-figure">

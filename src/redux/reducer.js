@@ -7,15 +7,14 @@ function comments(state = _comments, action) {
   switch(action.type) {
     case 'ADD_COMMENT' :
      if ((action.postId in {...state})) {
-      return {...state, [action.postId] : [...state[action.postId] ,{text: action.comment}]}
+      return {...state, [action.postId] : [...state[action.postId] ,{[action.commentId]: action.comment}]}
     } else {
-      return {...state, [action.postId] : [{text: action.comment}]}      
+      return {...state, [action.postId] : [{[action.commentId]: action.comment}]}      
     }
   default:  return state
 }
 }
   function posts(state = _posts, action) {
-    console.log(action.type)
     switch(action.type) {
       case 'REMOVE_PICTURE' :
         return [...state.slice(0,action.i),...state.slice(action.i + 1)]

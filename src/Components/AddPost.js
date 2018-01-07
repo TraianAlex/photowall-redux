@@ -7,7 +7,7 @@ class Single extends Component {
     e.preventDefault()
     const values = serializeForm(e.target, { hash: true })	
     if (values["imageLink"] && values["description"]) {
-    values.id = Number(new Date())
+    values.id = Number(new Date()).toString();
     this.props.addPicture(values.id,values.imageLink,values.description)
     this.props.history.push('/')
     }

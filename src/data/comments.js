@@ -1,21 +1,21 @@
 const comments = {
   "1161022966406956503":[
     {
-      "text":"Totally need to try this.",
+      "1":"Totally need to try this.",
     }
   ],
   "BAcyDyQwcXX":[
     {
-      "text":"Wes. WE should have lunch.",
+      "1":"Wes. WE should have lunch.",
     },
     {
-      "text":"#adults",
+      "2":"#adults",
     },
     {
-      "text":"@jdaveknox yes!",
+      "3":"@jdaveknox yes!",
     },
     {
-      "text":"😍 love Hamilton!",
+      "4":"😍 love Hamilton!",
     }
   ]
 };
