@@ -6,16 +6,9 @@ class Photo extends Component {
         e.preventDefault();
         const values = serializeForm(e.target, { hash: true })      
         const postId  = this.props.match.params.id
-        const commentId = Number(new Date()).toString();
         const comment = values.comment;
-        this.props.addComment(postId, commentId, comment);
+        this.props.addComment(postId, comment);
         this.refs.commentForm.reset();
-    }
-
-    getComment(comment) {
-        var key = Object.keys(comment)[0];
-        console.log(comment[key])      
-        return comment[key]  
     }
 
   render() {
@@ -25,7 +18,7 @@ class Photo extends Component {
         {this.props.postComments.map((comment, i) => {
             return (
                 <p key={i}>
-                {this.getComment(comment)}
+                {comment}
                 </p>
             )
         }

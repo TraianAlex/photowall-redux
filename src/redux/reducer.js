@@ -1,15 +1,14 @@
 import {combineReducers } from 'redux';
-import _comments from '../data/comments';
 import _posts from '../data/posts';
 
-function comments(state = _comments, action) {
+function comments(state = {}, action) {
   
   switch(action.type) {
     case 'ADD_COMMENT' :
      if ((action.postId in {...state})) {
-      return {...state, [action.postId] : [...state[action.postId] ,{[action.commentId]: action.comment}]}
+      return {...state, [action.postId] : [...state[action.postId] ,action.comment]}
     } else {
-      return {...state, [action.postId] : [{[action.commentId]: action.comment}]}      
+      return {...state, [action.postId] : [action.comment]}      
     }
   default:  return state
 }

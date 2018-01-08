@@ -15,11 +15,10 @@
     }
   }
 
-export function addComment(postId, commentId, comment) {
+export function addComment(postId, comment) {
   return {
     type: 'ADD_COMMENT',
     postId,
-    commentId,
     comment
   }
 }
